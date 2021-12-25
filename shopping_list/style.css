@@ -1,0 +1,98 @@
+:root {
+    --back-gradient: linear-gradient(
+        90deg,
+        rgba(116, 65, 226, 1) 6%,
+        rgba(112, 9, 121, 1) 24%,
+        rgba(95, 40, 141, 1) 43%,
+        rgba(83, 62, 156, 1) 49%,
+        rgba(76, 75, 164, 1) 56%,
+        rgba(69, 87, 172, 1) 63%,
+        rgba(83, 77, 178, 1) 63%,
+        rgba(115, 52, 193, 1) 70%,
+        rgba(0, 212, 255, 1) 100%
+    );
+    --light-violet: rgba(115, 52, 193, 1);
+    --dark-violet: rgb(67, 0, 150);
+    --white-font: white;
+
+    --hover-transition: background-color ease-in 300ms;
+}
+
+body {
+    text-align: center;
+    display: block;
+    width: 400px;
+    margin: auto;
+}
+
+h2 {
+    font-size: 40px;
+    background: var(--back-gradient);
+    padding: 10px;
+    color: var(--white-font);
+}
+
+.sameSet {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.listsBox {
+    display: flex;
+    flex-direction: column;
+    font-size: 30px;
+    cursor: pointer;
+}
+li {
+    list-style: none;
+}
+
+.listItems {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.trash {
+    background: none;
+    border: none;
+    color: var(--light-violet);
+}
+.trash:hover {
+    color: var(--back-gradient);
+}
+
+input {
+    margin-top: 20px;
+    width: 100%;
+    height: 50px;
+    font-size: 25px;
+    border-radius: 10px;
+    border: none;
+    text-align: center;
+    background-color: var(--light-violet);
+    color: var(--white-font);
+}
+input::placeholder {
+    color: var(--white-font);
+}
+input:hover {
+    background-color: var(--dark-violet);
+    transition: var(--hover-transition);
+}
+
+.plusBtn {
+    background-color: var(--light-violet);
+    border: none;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    border-radius: 50%;
+    margin-top: 20px;
+    color: var(--white-font);
+}
+
+.plusBtn:hover {
+    background-color: var(--dark-violet);
+    transition: var(--hover-transition);
+}

@@ -1,0 +1,126 @@
+:root {
+    --font-size: 25px;
+    --icon-backColor: rgb(122, 52, 27);
+    --font-colorWhite: white;
+    --icon-borderRadius: 10px;
+    --icon-padding: 5px;
+}
+
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+body {
+    background-color: black;
+}
+.game {
+    display: flex;
+    flex-direction: column;
+    /* 남아있는 공간에서 아래 게임필드가 배치될 수 있도록 하는 것  */
+    width: 800px;
+    height: 500px;
+    background: url(img/background.png) center/cover;
+    margin: auto;
+    border-radius: 20px;
+}
+
+.gamefield {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.gameController {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 가운데 배치 */
+    padding: 20px;
+}
+
+.playIcon {
+    width: 60px;
+    height: 60px;
+    background: var(--icon-backColor);
+    border-radius: var(--icon-borderRadius);
+    font-size: var(--font-size);
+    border: solid black 5px;
+    color: blanchedalmond;
+}
+
+.timer {
+    width: 100px;
+    background: white;
+    text-align: center;
+    font-size: 32px;
+    margin-top: 8px;
+    border: solid black 5px;
+    visibility: hidden;
+}
+
+.playIcon:hover {
+    cursor: pointer;
+    color: orange;
+}
+
+.catchCarrot {
+    background-color: cornflowerblue;
+    width: 50px;
+    height: 50px;
+    font-size: 36px;
+    margin-top: 5px;
+    text-align: center;
+    border-radius: 50px;
+    border: solid black 5px;
+    visibility: hidden;
+}
+
+.retryModal {
+    display: block;
+    width: 400px;
+    height: 120px;
+    font-size: 20px;
+    background-color: #00000090;
+    /* opacity로 투명도를 조절해주면 모달창 전체가 투명해지기 때문에 색상번호 뒤에 숫자를 써서 투명도를 조절하면 배경만 투명해진다 */
+    border: 5px solid black;
+    border-radius: var(--icon-borderRadius);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    /* 요소에 마진오토 적용하려면 부모요소도 마진 오토여야함 */
+    transform: translateY(-150%);
+}
+
+.retryModal--hide {
+    display: none;
+}
+.userState,
+.retryIcon {
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+}
+
+.retryIcon {
+    background: chocolate;
+    border: solid black 5px;
+    width: 80px;
+    border-radius: var(--icon-borderRadius);
+    margin: 30px 0 0 20px;
+    margin: auto;
+}
+
+.retryIcon:hover {
+    background: yellow;
+}
+
+.carrot,
+.bug {
+    transition: transform 100ms ease-in;
+}
+.carrot:hover,
+.bug:hover {
+    transform: scale(1.1);
+}

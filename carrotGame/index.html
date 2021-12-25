@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+            integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+            crossorigin="anonymous"
+        />
+        <script type="module" src="./src/main.js" defer></script>
+        <title>Carrot Game</title>
+    </head>
+    <body>
+        <section class="game">
+            <section class="gameController">
+                <button class="playIcon">
+                    <i class="fas fa-play"></i>
+                </button>
+                <span class="timer">0:0</span>
+                <span class="catchCarrot">9</span>
+            </section>
+            <section class="gamefield"></section>
+        </section>
+        <section class="retryModal--hide">
+            <span class="userState">you lose</span>
+            <button class="retryIcon"><i class="fas fa-undo-alt"></i></button>
+        </section>
+
+        <button class="test">click!</button>
+    </body>
+</html>
