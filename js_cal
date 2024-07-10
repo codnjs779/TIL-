@@ -1,0 +1,54 @@
+
+// 1번 고차함수 : 함수가 함수를 리턴하는 것 
+function name () => () => {
+
+}
+
+// 고차함수를 쓰면 return 을 생략할 수 있다
+function name () => {
+  return 'nn'
+}
+// 위 함수를 1번 처럼 변경할 수 있다
+
+//if 문 중첩 해결
+//1. if문 다음에 나오는 공통된 절차를 각 분기점 내부에 넣는다
+//2. 분기점에서 짧은 절차부터 실행하도록 IF 문을 작성한다. 
+// 3. 짧은 절차가 끝나면 return(함수 내부의 경우)이나, break(for문의 경우)로 중단한다
+//4. else 를 제거한다(이때 중첩 하나 제거) -> if문 안에 return이 있으면 else가 필요가 없기 때문
+//5. 반복문이 중복될 때 위 과정을 반복한다
+
+
+function test() {
+  let result = ''
+
+  if(a) {
+    if(!b) {
+      result = 'c';
+    }
+    
+  } else {
+    result = 'a';
+  }
+  result += 'b'
+  return result
+}
+
+// 아래와 같이 줄일 수 있다
+
+
+function test() {
+  let result = ''
+
+  if(!a) {
+    result = 'a';
+    result += 'b'
+    return result
+    
+  }
+  if(!b) {
+      result = 'c';
+    }
+    result += 'b'
+    return result
+  
+}
